@@ -20,9 +20,9 @@ public class Member {
     }
 
     public Member(String id, String userName, Integer age) {
-        this.id = id;
-        this.userName = userName;
-        this.age = age;
+        setId(id);
+        setUserName(userName);
+        setAge(age);
     }
 
     public String getId() {
@@ -30,6 +30,10 @@ public class Member {
     }
 
     public Member setId(String id) {
+        if (this.id != null) {
+            throw new IllegalArgumentException("The id may not be changed.");
+        }
+
         this.id = id;
         return this;
     }
