@@ -60,4 +60,12 @@ public class MemberPersistenceTest extends JPAHibernateTest {
         Member found = em.find(Member.class, SAVED_MEMBER_ID);
         assertThat(found).isNull();
     }
+
+    @Test
+    public void 영속_엔티티_동일성_동등성_보장() {
+        Member member1 = em.find(Member.class, SAVED_MEMBER_ID);
+        Member member2 = em.find(Member.class, SAVED_MEMBER_ID);
+        assertThat(member1).isSameAs(member2)
+                .isEqualTo(member2);
+    }
 }
