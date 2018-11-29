@@ -1,3 +1,4 @@
 rootProject.name = 'jpa-kata'
 include 'chap02'
+include 'chap05'
 

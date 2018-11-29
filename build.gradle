@@ -11,16 +11,16 @@ subprojects {
     }
 
     dependencies {
-        testCompile 'junit:junit:4.8.2'
-    }
-}
-
-project(':chap02') {
-    dependencies {
         compile group: 'com.h2database', name: 'h2', version: '1.4.197'
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.3.7.Final'
 
         testCompile group: 'junit', name: 'junit', version: '4.12'
         testCompile group: 'org.assertj', name: 'assertj-core', version: '3.11.1'
     }
+}
+
+project(':chap02') {
+}
+
+project(':chap05') {
 }
